@@ -44,3 +44,7 @@ C:\Users\Alexis\Desktop\Aulas\ISI\ISI_TP2\Terra\obj\Debug\net8.0\refint\Terra.dl
 C:\Users\Alexis\Desktop\Aulas\ISI\ISI_TP2\Terra\obj\Debug\net8.0\Terra.pdb
 C:\Users\Alexis\Desktop\Aulas\ISI\ISI_TP2\Terra\obj\Debug\net8.0\Terra.genruntimeconfig.cache
 C:\Users\Alexis\Desktop\Aulas\ISI\ISI_TP2\Terra\obj\Debug\net8.0\ref\Terra.dll
+C:\Users\Alexis\Desktop\Aulas\ISI\ISI_TP2\Terra\obj\Debug\net8.0\Terra.sourcelink.json
+C:\Users\Alexis\Desktop\Aulas\ISI\ISI_TP2\Terra\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Alexis\Desktop\Aulas\ISI\ISI_TP2\Terra\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Alexis\Desktop\Aulas\ISI\ISI_TP2\Terra\bin\Debug\net8.0\Npgsql.dll

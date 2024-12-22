@@ -1,13 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "zirM5suadJY=",
+  "dgSpecHash": "seBYOdG8ffc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Alexis\\Desktop\\Aulas\\ISI\\ISI_TP2\\Terra\\Terra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alexis\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Alexis\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Alexis\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
     "C:\\Users\\Alexis\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.9\\microsoft.netcore.platforms.3.1.9.nupkg.sha512",
     "C:\\Users\\Alexis\\.nuget\\packages\\microsoft.openapi\\1.6.22\\microsoft.openapi.1.6.22.nupkg.sha512",
     "C:\\Users\\Alexis\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Alexis\\.nuget\\packages\\npgsql\\9.0.2\\npgsql.9.0.2.nupkg.sha512",
     "C:\\Users\\Alexis\\.nuget\\packages\\soapcore\\1.1.0.51\\soapcore.1.1.0.51.nupkg.sha512",
     "C:\\Users\\Alexis\\.nuget\\packages\\swashbuckle.aspnetcore\\7.2.0\\swashbuckle.aspnetcore.7.2.0.nupkg.sha512",
     "C:\\Users\\Alexis\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\7.2.0\\swashbuckle.aspnetcore.swagger.7.2.0.nupkg.sha512",

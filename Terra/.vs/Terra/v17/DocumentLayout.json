@@ -15,6 +15,14 @@
       "RelativeMoniker": "D:0:0:{CB9F29AE-261C-465F-8204-CCB1EC5D8086}|Terra.csproj|solutionrelative:servicedatacontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CB9F29AE-261C-465F-8204-CCB1EC5D8086}|Terra.csproj|c:\\users\\alexis\\desktop\\aulas\\isi\\isi_tp2\\terra\\utils\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB9F29AE-261C-465F-8204-CCB1EC5D8086}|Terra.csproj|solutionrelative:utils\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB9F29AE-261C-465F-8204-CCB1EC5D8086}|Terra.csproj|c:\\users\\alexis\\desktop\\aulas\\isi\\isi_tp2\\terra\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CB9F29AE-261C-465F-8204-CCB1EC5D8086}|Terra.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CB9F29AE-261C-465F-8204-CCB1EC5D8086}|Terra.csproj|c:\\users\\alexis\\desktop\\aulas\\isi\\isi_tp2\\terra\\terra.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{CB9F29AE-261C-465F-8204-CCB1EC5D8086}|Terra.csproj|solutionrelative:terra.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     }
@@ -26,8 +34,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DB.cs",
+              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\Aulas\\ISI\\ISI_TP2\\Terra\\Utils\\DB.cs",
+              "RelativeDocumentMoniker": "Utils\\DB.cs",
+              "ToolTip": "C:\\Users\\Alexis\\Desktop\\Aulas\\ISI\\ISI_TP2\\Terra\\Utils\\DB.cs",
+              "RelativeToolTip": "Utils\\DB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T20:58:07.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\Aulas\\ISI\\ISI_TP2\\Terra\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Alexis\\Desktop\\Aulas\\ISI\\ISI_TP2\\Terra\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-20T20:43:48.718Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -36,7 +70,7 @@
               "RelativeDocumentMoniker": "Services\\BeneficiarioService.cs",
               "ToolTip": "C:\\Users\\Alexis\\Desktop\\Aulas\\ISI\\ISI_TP2\\Terra\\Services\\BeneficiarioService.cs",
               "RelativeToolTip": "Services\\BeneficiarioService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAUwBgAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T19:52:00.846Z",
               "EditorCaption": ""
@@ -49,7 +83,7 @@
               "RelativeDocumentMoniker": "ServiceDataContract.cs",
               "ToolTip": "C:\\Users\\Alexis\\Desktop\\Aulas\\ISI\\ISI_TP2\\Terra\\ServiceDataContract.cs",
               "RelativeToolTip": "ServiceDataContract.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAMwEwAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAqwC8AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T19:44:54.617Z",
               "EditorCaption": ""
@@ -62,14 +96,14 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Alexis\\Desktop\\Aulas\\ISI\\ISI_TP2\\Terra\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T19:41:06.554Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Terra.http",
               "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\Aulas\\ISI\\ISI_TP2\\Terra\\Terra.http",
               "RelativeDocumentMoniker": "Terra.http",
@@ -77,8 +111,7 @@
               "RelativeToolTip": "Terra.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-12-20T19:40:56.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T19:40:56.809Z"
             }
           ]
         }
