@@ -10,10 +10,10 @@ namespace Terra {
         public int Id { get; set; }
 
         [DataMember]
-        public string NomeRepresentante { get; set; }
+        public required string NomeRepresentante { get; set; }
 
         [DataMember]
-        public string Contacto { get; set; }
+        public required string Contacto { get; set; }
 
         [DataMember]
         public string Nacionalidade { get; set; } = "Português";

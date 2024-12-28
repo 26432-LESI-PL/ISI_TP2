@@ -7,17 +7,65 @@ namespace Terra.Services
     {
         public void AddBeneficiario(Beneficiario beneficiario)
         {
-            throw new NotImplementedException();
+            DbConnector db = new();
+            using var dataSource = db.GetDataSource();
+            using var conn = dataSource.OpenConnection();
+            //conn.Open();
+            using var tx = conn.BeginTransaction();
+            NpgsqlCommand query = new("INSERT INTO doamais.beneficiario (nome_representante, contacto, nacionalidade, dimensao_agregado) VALUES ($1, $2, $3, $4)", conn, tx)
+            {
+                Parameters =
+                {
+                    new() { Value = beneficiario.NomeRepresentante },
+                    new() { Value = beneficiario.Contacto },
+                    new() { Value = beneficiario.Nacionalidade },
+                    new() { Value = beneficiario.DimensaoAgregado },
+                }
+            };
+            query.ExecuteNonQuery();
+            tx.Commit();
+            conn.Close();
         }
 
         public void DeleteBeneficiario(int id)
         {
-            throw new NotImplementedException();
+            DbConnector db = new();
+            using var dataSource = db.GetDataSource();
+            using var conn = dataSource.OpenConnection();
+            using var tx = conn.BeginTransaction();
+            NpgsqlCommand query = new("DELETE FROM doamais.beneficiario WHERE id = $1", conn, tx)
+            {
+                Parameters =
+                {
+                    new() { Value = id },
+                }
+            };
+            query.ExecuteNonQuery();
+            tx.Commit();
+            conn.Close();
         }
 
         public void UpdateBeneficiario(Beneficiario beneficiario)
         {
-            throw new NotImplementedException();
+            DbConnector db = new();
+            using var dataSource = db.GetDataSource();
+            using var conn = dataSource.OpenConnection();
+            using var tx = conn.BeginTransaction();
+
+            NpgsqlCommand query = new("UPDATE doamais.beneficiario SET nome_representante = $1, contacto = $2, nacionalidade = $3, dimensao_agregado = $4 WHERE id = $5", conn, tx)
+            {
+                Parameters =
+                {
+                    new() { Value = beneficiario.NomeRepresentante },
+                    new() { Value = beneficiario.Contacto },
+                    new() { Value = beneficiario.Nacionalidade },
+                    new() { Value = beneficiario.DimensaoAgregado },
+                    new() { Value = beneficiario.Id },
+                }
+            };
+            query.ExecuteNonQuery();
+            tx.Commit();
+            conn.Close();
         }
 
         public IEnumerable<Beneficiario> GetAllBeneficiarios()
@@ -48,8 +96,6 @@ namespace Terra.Services
         public Beneficiario GetBeneficiarioById(int id)
         {
             DbConnector db = new();
-            Beneficiario? beneficiario = null;
-
             using var dataSource = db.GetDataSource();
             using var conn = dataSource.OpenConnection();
             using var cmd = new NpgsqlCommand("SELECT id, nome_representante, contacto, nacionalidade, dimensao_agregado FROM doamais.beneficiario WHERE id = $1", conn)
@@ -60,6 +106,7 @@ namespace Terra.Services
                 }
             };
             using var reader = cmd.ExecuteReader();
+            Beneficiario? beneficiario;
             if (reader.Read())
             {
                 beneficiario = new Beneficiario
@@ -76,7 +123,7 @@ namespace Terra.Services
                 // No data found, handle accordingly
                 throw new Exception("Beneficiario not found");
             }
-            
+
             conn.Close();
            
 
