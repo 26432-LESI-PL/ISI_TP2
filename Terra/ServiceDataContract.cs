@@ -64,7 +64,7 @@ namespace Terra {
         Turno GetTurnoById(int id);
 
         [OperationContract]
-        IEnumerable<Turno> GetAllTurnos();
+        IEnumerable<Turno> GetAllTurnos(int user_id = 0);
 
         [OperationContract]
         void AddTurno(Turno turno);

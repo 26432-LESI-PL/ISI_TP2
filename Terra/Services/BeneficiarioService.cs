@@ -132,34 +132,124 @@ namespace Terra.Services
 
         public void AddTurno(Turno turno)
         {
-            throw new NotImplementedException();
+            DbConnector db = new();
+            using var dataSource = db.GetDataSource();
+            using var conn = dataSource.OpenConnection();
+            using var tx = conn.BeginTransaction();
+            using var cmd = new NpgsqlCommand("INSERT INTO doamais.turno (user_id, time, tarefas) VALUES ($1, $2, $3)", conn, tx)
+            {
+                Parameters =
+                {
+                    new() { Value = turno.UserId },
+                    new() { Value = turno.Time },
+                    new() { Value = turno.Tarefas },
+                }
+            };
+            cmd.ExecuteNonQuery();
+            tx.Commit();
+            conn.Close();
         }
 
         public void DeleteTurno(int id)
         {
-            throw new NotImplementedException();
+            DbConnector db = new();
+            using var dataSource = db.GetDataSource();
+            using var conn = dataSource.OpenConnection();
+            using var tx = conn.BeginTransaction();
+            using var cmd = new NpgsqlCommand("DELETE FROM doamais.turno WHERE id = $1", conn, tx)
+            {
+                Parameters =
+                {
+                    new() { Value = id },
+                }
+            };
+            cmd.ExecuteNonQuery();
+            tx.Commit();
+            conn.Close();
         }
 
-        public IEnumerable<Turno> GetAllTurnos()
+        public IEnumerable<Turno> GetAllTurnos(int user_id = 0)
         {
-            throw new NotImplementedException();
+            DbConnector db = new();
+            using var dataSource = db.GetDataSource();
+            using var conn = dataSource.OpenConnection();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id, user_id, time, tarefas FROM doamais.turno", conn);
+            if (user_id  != 0)
+            {
+                cmd = new NpgsqlCommand("SELECT id, user_id, time, tarefas FROM doamais.turno WHERE user_id = $1", conn)
+                {
+                    Parameters = { new() { Value = user_id } },
+                };
+            }
+            using var reader = cmd.ExecuteReader();
+            List<Turno> turnos = [];
+            while (reader.Read())
+            {
+                turnos.Add(new Turno
+                {
+                    Id = reader.GetInt32(0),
+                    UserId = reader.GetInt32(1),
+                    Time = reader.GetDateTime(2),
+                    Tarefas = reader.GetString(3)
+                });
+            }
+            return turnos;
         }
 
 
         public Turno GetTurnoById(int id)
         {
-            throw new NotImplementedException();
+            DbConnector db = new();
+            using var dataSource = db.GetDataSource();
+            using var conn = dataSource.OpenConnection();
+            using var cmd = new NpgsqlCommand("SELECT id, user_id, time, tarefas FROM doamais.turno WHERE id = $1", conn)
+            {
+                Parameters =
+                {
+                    new() { Value = id },
+                }
+            };
+            using var reader = cmd.ExecuteReader();
+            Turno turno;
+            if (reader.Read())
+            {
+                turno = new Turno
+                {
+                    Id = reader.GetInt32(0),
+                    UserId = reader.GetInt32(1),
+                    Time = reader.GetDateTime(2),
+                    Tarefas = reader.GetString(3)
+                };
+            }
+            else
+            {
+                // No data found, handle accordingly
+                throw new Exception("Turno not found");
+            }
+            return turno;
         }
 
 
         public void UpdateTurno(Turno turno)
         {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Beneficiario> GetAllBeneficiariosAsync()
-        {
-            throw new NotImplementedException();
+            DbConnector db = new();
+            using var dataSource = db.GetDataSource();
+            using var conn = dataSource.OpenConnection();
+            using var tx = conn.BeginTransaction();
+            using var cmd = new NpgsqlCommand(
+                "UPDATE doamais.turno SET user_id = $1, time = $2, tarefas = $3 WHERE id = $4", conn, tx)
+            {
+                Parameters =
+                {
+                    new() { Value = turno.UserId },
+                    new() { Value = turno.Time },
+                    new() { Value = turno.Tarefas },
+                    new() { Value = turno.Id },
+                }
+            };
+            cmd.ExecuteNonQuery();
+            tx.Commit();
+            conn.Close();
         }
     }
 }
