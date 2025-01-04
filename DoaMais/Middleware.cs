@@ -27,7 +27,7 @@ namespace DoaMais
             }
 
             // Don't check for authentication if the request is for the login endpoint
-            if (context.Request.Path.StartsWithSegments("/Users/login"))
+            if (context.Request.Path.StartsWithSegments("/Users/Login"))
             {
                 await next.Invoke();
                 return;
@@ -115,7 +115,8 @@ namespace DoaMais
 
             foreach (var route in routes)
             {
-                if (currentRoute.StartsWithSegments(route.RoutePath) && currentMethod.Equals(route.Method, StringComparison.OrdinalIgnoreCase))
+                if (currentRoute.StartsWithSegments(route.RoutePath) && currentRoute != "/Users/Login"
+                && currentMethod.Equals(route.Method, StringComparison.OrdinalIgnoreCase))
                 {
                     // Verifique se o usuário tem permissão de administrador
                     var role = context.Session.GetString("role");
